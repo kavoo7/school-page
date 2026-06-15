@@ -7,7 +7,10 @@ export const Route = createFileRoute("/admissions")({
   head: () => ({
     meta: [
       { title: "Admissions — Jupiter Academy" },
-      { name: "description", content: "How to apply to Jupiter Academy, timelines, financial aid and tuition." },
+      {
+        name: "description",
+        content: "How to apply to Jupiter Academy, timelines, financial aid and tuition.",
+      },
       { property: "og:title", content: "Admissions at Jupiter Academy" },
       { property: "og:description", content: "Applications open for the 2026–27 school year." },
     ],
@@ -16,7 +19,10 @@ export const Route = createFileRoute("/admissions")({
 });
 
 const steps = [
-  ["Inquire", "Submit a short interest form. We'll send a viewbook and invite you to an open morning."],
+  [
+    "Inquire",
+    "Submit a short interest form. We'll send a viewbook and invite you to an open morning.",
+  ],
   ["Visit", "Tour campus with a student guide and meet our admissions team."],
   ["Apply", "Complete the online application by January 15. Includes a short writing sample."],
   ["Assess & interview", "Age‑appropriate assessment and a family conversation."],
@@ -31,7 +37,8 @@ function AdmissionsPage() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h1 className="font-serif text-4xl font-semibold md:text-5xl">Admissions</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/85">
-            Applications are open for the 2026–27 school year across all grades. We admit on a rolling basis once seats are filled.
+            Applications are open for the 2026–27 school year across all grades. We admit on a
+            rolling basis once seats are filled.
           </p>
         </div>
       </section>
@@ -41,7 +48,9 @@ function AdmissionsPage() {
         <ol className="mt-6 space-y-4">
           {steps.map(([t, d], i) => (
             <li key={t} className="flex gap-4 rounded-xl border border-border bg-card p-5">
-              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent font-semibold text-accent-foreground">{i + 1}</div>
+              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent font-semibold text-accent-foreground">
+                {i + 1}
+              </div>
               <div>
                 <div className="font-semibold text-primary">{t}</div>
                 <p className="mt-1 text-sm text-muted-foreground">{d}</p>
@@ -71,8 +80,13 @@ function AdmissionsPage() {
 
         <div className="mt-12 rounded-2xl bg-secondary/60 p-8 text-center">
           <h3 className="font-serif text-xl font-semibold text-primary">Ready to begin?</h3>
-          <p className="mt-2 text-sm text-muted-foreground">Get in touch and we'll schedule your visit.</p>
-          <Link to="/contact" className="mt-4 inline-flex rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90">
+          <p className="mt-2 text-sm text-muted-foreground">
+            Get in touch and we'll schedule your visit.
+          </p>
+          <Link
+            to="/contact"
+            className="mt-4 inline-flex rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
+          >
             Contact Admissions
           </Link>
         </div>

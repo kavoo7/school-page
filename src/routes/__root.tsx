@@ -1,11 +1,11 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
+  HeadContent,
   Link,
+  Outlet,
+  Scripts,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -78,7 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Jupiter Academy" },
-      { name: "description", content: "K–12 independent school where STEM, social sciences and the arts come together." },
+      {
+        name: "description",
+        content: "K–12 independent school where STEM, social sciences and the arts come together.",
+      },
       { name: "author", content: "Jupiter Academy" },
       { property: "og:title", content: "Jupiter Academy" },
       { property: "og:description", content: "Curiosity. Craft. Character." },
@@ -115,6 +118,12 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  if (!queryClient) {
+    // If queryClient is missing, rendering QueryClientProvider will crash the app.
+    // This often happens if the router context wasn't properly initialized.
+    return <Outlet />;
+  }
 
   return (
     <QueryClientProvider client={queryClient}>

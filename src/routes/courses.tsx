@@ -9,10 +9,17 @@ import { Atom, Globe2, Palette } from "lucide-react";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses — Jupiter Academy" },
-      { name: "description", content: "Explore Jupiter Academy's offerings across STEM, social sciences and the arts, with example projects from each." },
-      { property: "og:title", content: "Courses at Jupiter Academy" },
-      { property: "og:description", content: "STEM, social sciences and arts — with real student work from each pillar." },
+      { title: "Learning — Jupiter Academy Kenya" },
+      {
+        name: "description",
+        content:
+          "Explore Jupiter Academy Kenya's CBC and IGCSE learning across STEM, Kenyan studies and the arts.",
+      },
+      { property: "og:title", content: "Learning at Jupiter Academy Kenya" },
+      {
+        property: "og:description",
+        content: "CBC, IGCSE, Kenyan studies, STEM and arts — with real student work.",
+      },
     ],
   }),
   component: CoursesPage,
@@ -35,58 +42,145 @@ const tracks: Track[] = [
     icon: Atom,
     img: stemImg,
     intro:
-      "Science, technology, engineering and mathematics at Jupiter is hands‑on from the first week. Students build, measure, code and question.",
+      "Science, technology, engineering and mathematics at Jupiter is hands-on from the first week. Students build, measure, code and question using Kenyan problems as their brief.",
     courses: [
-      { name: "Foundations of Physics", grades: "Grades 9–10", desc: "Mechanics, waves and electricity through weekly labs." },
-      { name: "Organic Chemistry", grades: "Grade 11", desc: "Structure, reaction mechanisms and a term‑long synthesis project." },
-      { name: "Robotics & Embedded Systems", grades: "Grades 10–12", desc: "Arduino, sensors and autonomous robots for the regional league." },
-      { name: "Data Science with Python", grades: "Grade 12", desc: "Statistics, visualisation and a capstone with a real dataset." },
-      { name: "Calculus (HL)", grades: "Grade 12", desc: "Differential and integral calculus with applications to physics and economics." },
+      {
+        name: "Integrated Science",
+        grades: "Junior Secondary",
+        desc: "Matter, energy, health and environment through practical CBC investigations.",
+      },
+      {
+        name: "IGCSE Chemistry",
+        grades: "Years 10–11",
+        desc: "Structure, reactions and lab technique with links to water, soils and industry.",
+      },
+      {
+        name: "Robotics & Embedded Systems",
+        grades: "Grades 10–12",
+        desc: "Arduino, sensors and autonomous robots for Nairobi STEM fairs and contests.",
+      },
+      {
+        name: "Data Science with Python",
+        grades: "Senior School",
+        desc: "Statistics, visualisation and capstones using public Kenyan datasets.",
+      },
+      {
+        name: "Mathematics for STEM",
+        grades: "Senior School",
+        desc: "Algebra, calculus and modelling for physics, economics and engineering.",
+      },
     ],
     examples: [
-      { title: "Mars Rover Prototype", desc: "Year 11 team built a six‑wheel rover that won 2nd at State Robotics." },
-      { title: "River pH Survey", desc: "Year 10 published a 12‑month water quality study of the Jupiter Creek." },
-      { title: "ML Bird Classifier", desc: "Grade 12 capstone classifying 38 local bird species from audio clips." },
+      {
+        title: "Smart Irrigation Prototype",
+        desc: "Year 10 learners built soil-moisture sensors for a drip irrigation model.",
+      },
+      {
+        title: "Nairobi River Water Study",
+        desc: "Junior Secondary learners tested pH and turbidity, then presented restoration ideas.",
+      },
+      {
+        title: "AI Bird Call Classifier",
+        desc: "Senior learners classified calls from Nairobi National Park and Karura Forest.",
+      },
     ],
   },
   {
     id: "social",
-    title: "Social Sciences",
+    title: "Kenyan & Global Studies",
     icon: Globe2,
     img: socialImg,
     intro:
-      "Our humanities program treats students as junior scholars: they read primary sources, run debates and produce original research.",
+      "Our humanities program treats students as junior scholars: they read primary sources, run debates, practise Kiswahili and produce original research.",
     courses: [
-      { name: "World History 1500–Today", grades: "Grade 9", desc: "From the Age of Exploration to the present, taught through case studies." },
-      { name: "Human Geography", grades: "Grade 10", desc: "Cities, migration and climate — with fieldwork in the local borough." },
-      { name: "Economics", grades: "Grades 11–12", desc: "Micro, macro and behavioural economics with a market simulation." },
-      { name: "Psychology", grades: "Grade 11", desc: "Cognition, development and a small‑scale ethics‑reviewed study." },
-      { name: "Global Politics", grades: "Grade 12", desc: "Model UN, comparative governments and a research paper." },
+      {
+        name: "Kenyan History & Governance",
+        grades: "Junior Secondary",
+        desc: "Pre-colonial societies, independence, devolution and active citizenship.",
+      },
+      {
+        name: "Geography of East Africa",
+        grades: "Years 9–11",
+        desc: "Landforms, climate, cities and fieldwork from the Rift Valley to the coast.",
+      },
+      {
+        name: "Business & Economics",
+        grades: "Grades 11–12",
+        desc: "Enterprise, markets, SACCOs and budgeting with a student biashara simulation.",
+      },
+      {
+        name: "Kiswahili Communication",
+        grades: "All years",
+        desc: "Debate, fasihi, public speaking and confident everyday Kiswahili.",
+      },
+      {
+        name: "Global Perspectives",
+        grades: "Senior School",
+        desc: "Model UN, Pan-African affairs, climate justice and research writing.",
+      },
     ],
     examples: [
-      { title: "Oral Histories of Springfield", desc: "Grade 9 interviewed 40 long‑time residents; archived at the city library." },
-      { title: "Refugee Pathways Atlas", desc: "Grade 10 mapped post‑2015 migration corridors with interactive maps." },
-      { title: "Ballot Design Study", desc: "Grade 12 ran a usability study on local ballots, presented to the council." },
+      {
+        title: "Oral Histories of Nairobi",
+        desc: "Learners interviewed elders from Eastlands, Westlands and Kiambu families.",
+      },
+      {
+        title: "County Budget Explainer",
+        desc: "Senior learners turned public county budgets into clear infographics.",
+      },
+      {
+        title: "Madaraka Debate Series",
+        desc: "House teams debated leadership, rights and responsibility in Kenya today.",
+      },
     ],
   },
   {
     id: "art",
-    title: "Artwork",
+    title: "Arts & Culture",
     icon: Palette,
     img: artImg,
     intro:
-      "Studio time is protected on every student's timetable. Our art program builds technique, critique and a personal voice.",
+      "Studio time is protected on every student's timetable. Our arts program builds technique, critique and a Kenyan creative voice.",
     courses: [
-      { name: "Drawing & Painting", grades: "Grades 9–12", desc: "Observation, colour theory and a sustained body of work." },
-      { name: "Sculpture & Ceramics", grades: "Grades 10–12", desc: "Hand‑building, wheel and mixed media installations." },
-      { name: "Photography", grades: "Grades 10–12", desc: "Analog darkroom and digital workflows; portfolio review at year end." },
-      { name: "Graphic Design", grades: "Grades 11–12", desc: "Typography, identity and a real brief from a local nonprofit." },
-      { name: "Film & Animation", grades: "Grades 11–12", desc: "Scripting, shooting and post — a short film screened at the spring festival." },
+      {
+        name: "Drawing, Painting & Design",
+        grades: "Grades 9–12",
+        desc: "Observation, colour, pattern and a sustained portfolio of original work.",
+      },
+      {
+        name: "Sculpture, Beadwork & Ceramics",
+        grades: "Grades 10–12",
+        desc: "Hand-building, clay, beadwork, found objects and mixed media installations.",
+      },
+      {
+        name: "Photography",
+        grades: "Grades 10–12",
+        desc: "Portraits, documentary walks and digital workflows; portfolio review at year end.",
+      },
+      {
+        name: "Graphic Design",
+        grades: "Grades 11–12",
+        desc: "Typography, identity and a real brief from a Nairobi community organisation.",
+      },
+      {
+        name: "Film, Animation & Drama",
+        grades: "Grades 11–12",
+        desc: "Scripting, shooting, post-production and drama for music and theatre festivals.",
+      },
     ],
     examples: [
-      { title: "‘Tides’ — senior painting series", desc: "Six large oil canvases exploring memory and the coast." },
-      { title: "Civic Posters", desc: "Year 11 designed a poster campaign now displayed across Springfield buses." },
-      { title: "Animated Short ‘Light Years’", desc: "Grade 12 short film selected for a state youth film festival." },
+      {
+        title: "Lamu Light — senior painting series",
+        desc: "Six large canvases exploring coastal light, memory and Swahili architecture.",
+      },
+      {
+        title: "Matatu Type Posters",
+        desc: "Year 11 designed a poster series inspired by Nairobi street lettering.",
+      },
+      {
+        title: "Animated Short ‘Safari ya Kesho’",
+        desc: "Senior film selected for a Kenyan youth arts showcase.",
+      },
     ],
   },
 ];
@@ -98,13 +192,20 @@ function CoursesPage() {
 
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h1 className="font-serif text-4xl font-semibold text-primary md:text-5xl">Courses & Programs</h1>
+          <h1 className="font-serif text-4xl font-semibold text-primary md:text-5xl">
+            Learning & Pathways
+          </h1>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            A balanced curriculum across three pillars. Click through to see what students are actually making.
+            CBC foundations, IGCSE options and Kenyan fieldwork across three pillars. Click through
+            to see what students are actually making.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {tracks.map((t) => (
-              <a key={t.id} href={`#${t.id}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:bg-accent/20">
+              <a
+                key={t.id}
+                href={`#${t.id}`}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:bg-accent/20"
+              >
                 <t.icon className="h-4 w-4" /> {t.title}
               </a>
             ))}
@@ -113,30 +214,45 @@ function CoursesPage() {
       </section>
 
       {tracks.map((t, i) => (
-        <section key={t.id} id={t.id} className={`scroll-mt-20 ${i % 2 === 1 ? "bg-secondary/40" : ""}`}>
+        <section
+          key={t.id}
+          id={t.id}
+          className={`scroll-mt-20 ${i % 2 === 1 ? "bg-secondary/40" : ""}`}
+        >
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
               <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]">
-                <img src={t.img} alt={`${t.title} program`} loading="lazy" width={1024} height={768} className="h-full w-full object-cover" />
+                <img
+                  src={t.img}
+                  alt={`${t.title} program`}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-accent/30 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
                   <t.icon className="h-4 w-4" /> {t.title}
                 </div>
-                <h2 className="mt-3 font-serif text-3xl font-semibold text-primary md:text-4xl">{t.title} at Jupiter</h2>
+                <h2 className="mt-3 font-serif text-3xl font-semibold text-primary md:text-4xl">
+                  {t.title} at Jupiter Kenya
+                </h2>
                 <p className="mt-3 text-muted-foreground">{t.intro}</p>
               </div>
             </div>
 
             {/* Courses list */}
             <div className="mt-12">
-              <h3 className="font-serif text-xl font-semibold text-primary">Courses offered</h3>
+              <h3 className="font-serif text-xl font-semibold text-primary">Learning offered</h3>
               <div className="mt-4 grid gap-4 md:grid-cols-2">
                 {t.courses.map((c) => (
                   <div key={c.name} className="rounded-xl border border-border bg-card p-5">
                     <div className="flex items-baseline justify-between gap-3">
                       <h4 className="font-semibold text-primary">{c.name}</h4>
-                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{c.grades}</span>
+                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        {c.grades}
+                      </span>
                     </div>
                     <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
                   </div>
@@ -146,10 +262,16 @@ function CoursesPage() {
 
             {/* Examples */}
             <div className="mt-12">
-              <h3 className="font-serif text-xl font-semibold text-primary">Examples of student work</h3>
+              <h3 className="font-serif text-xl font-semibold text-primary">
+                Examples of student work
+              </h3>
               <div className="mt-4 grid gap-4 md:grid-cols-3">
                 {t.examples.map((e) => (
-                  <div key={e.title} className="rounded-xl border-l-4 bg-card p-5 shadow-sm" style={{ borderLeftColor: "oklch(0.78 0.14 75)" }}>
+                  <div
+                    key={e.title}
+                    className="rounded-xl border-l-4 bg-card p-5 shadow-sm"
+                    style={{ borderLeftColor: "oklch(0.78 0.14 75)" }}
+                  >
                     <h4 className="font-semibold text-primary">{e.title}</h4>
                     <p className="mt-2 text-sm text-muted-foreground">{e.desc}</p>
                   </div>
